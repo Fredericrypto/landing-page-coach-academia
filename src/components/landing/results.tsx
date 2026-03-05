@@ -36,16 +36,16 @@ export function Results() {
             </p>
           </div>
         </div>
-        <div className="mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12 mt-12">
+        <div className="mt-12 flex flex-wrap items-stretch justify-center gap-8 lg:gap-12">
           {results.map((result, index) => {
             const beforeImg = getImage(result.beforeId);
             const afterImg = getImage(result.afterId);
             if (!beforeImg || !afterImg) return null;
 
             return (
-              <Card key={index} className="overflow-hidden border-border/50">
-                <CardContent className="p-0">
-                  <div className="grid grid-cols-2">
+              <Card key={index} className="overflow-hidden border-border/50 w-full max-w-sm flex flex-col">
+                <CardContent className="p-0 flex flex-col flex-grow">
+                  <div className="grid grid-cols-2 flex-grow">
                     <div className="relative aspect-[2/3]">
                       <Image
                         src={beforeImg.imageUrl}

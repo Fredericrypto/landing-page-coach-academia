@@ -52,11 +52,11 @@ export function Testimonials() {
             </p>
           </div>
         </div>
-        <div className="mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-12 justify-items-center">
+        <div className="mt-12 flex flex-wrap items-stretch justify-center gap-8">
           {testimonials.map((testimonial, index) => {
             const image = getImage(testimonial.imageId);
             return (
-              <Card key={index} className="bg-background border-border/50 flex flex-col">
+              <Card key={index} className="bg-background border-border/50 flex flex-col w-full max-w-xs">
                 <CardContent className="pt-6 flex-grow">
                   <p className="text-muted-foreground italic">&quot;{testimonial.text}&quot;</p>
                 </CardContent>
