@@ -28,7 +28,7 @@ export function Hero() {
           Emagrecimento, hipertrofia, condicionamento físico – avaliação gratuita + plano exclusivo!
         </p>
         <div className="flex justify-center">
-          <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 text-lg px-8 py-6">
+          <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 text-lg px-8 py-6">
             <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
               Agende Agora
             </a>

@@ -64,7 +64,7 @@ export function Header() {
                     </Button>
                   </SheetClose>
                 </div>
-                <nav className="flex flex-col items-start gap-6">
+                <nav className="flex flex-col items-center text-center gap-6">
                   {NAV_LINKS.map((link) => (
                     <SheetClose asChild key={link.href}>
                       <Link

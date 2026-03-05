@@ -9,61 +9,61 @@
     {
       "id": "result-1-before",
       "description": "Before image of a client transformation",
-      "imageUrl": "https://picsum.photos/seed/result1before/400/600",
+      "imageUrl": "https://picsum.photos/seed/fitnessbefore1/400/600",
       "imageHint": "person before"
     },
     {
       "id": "result-1-after",
       "description": "After image of a client transformation",
-      "imageUrl": "https://picsum.photos/seed/result1after/400/600",
+      "imageUrl": "https://picsum.photos/seed/fitnessafter1/400/600",
       "imageHint": "person fitness"
     },
     {
       "id": "result-2-before",
       "description": "Before image of a client transformation",
-      "imageUrl": "https://picsum.photos/seed/result2before/400/600",
+      "imageUrl": "https://picsum.photos/seed/fitnessbefore2/400/600",
       "imageHint": "man before"
     },
     {
       "id": "result-2-after",
       "description": "After image of a client transformation",
-      "imageUrl": "https://picsum.photos/seed/result2after/400/600",
+      "imageUrl": "https://picsum.photos/seed/fitnessafter2/400/600",
       "imageHint": "man fitness"
     },
     {
       "id": "result-3-before",
       "description": "Before image of a client transformation",
-      "imageUrl": "https://picsum.photos/seed/result3before/400/600",
+      "imageUrl": "https://picsum.photos/seed/fitnessbefore3/400/600",
       "imageHint": "woman before"
     },
     {
       "id": "result-3-after",
       "description": "After image of a client transformation",
-      "imageUrl": "https://picsum.photos/seed/result3after/400/600",
+      "imageUrl": "https://picsum.photos/seed/fitnessafter3/400/600",
       "imageHint": "woman fitness"
     },
     {
       "id": "testimonial-1",
       "description": "Client photo for testimonial",
-      "imageUrl": "https://picsum.photos/seed/person1/100/100",
+      "imageUrl": "https://images.unsplash.com/photo-1557862921-37829c790f19?q=80&w=200&auto=format&fit=crop",
       "imageHint": "happy person"
     },
     {
       "id": "testimonial-2",
       "description": "Client photo for testimonial",
-      "imageUrl": "https://picsum.photos/seed/person2/100/100",
+      "imageUrl": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=200&auto=format&fit=crop",
       "imageHint": "smiling person"
     },
     {
       "id": "testimonial-3",
       "description": "Client photo for testimonial",
-      "imageUrl": "https://picsum.photos/seed/person3/100/100",
+      "imageUrl": "https://images.unsplash.com/photo-1583864697784-a0efc8379f70?q=80&w=200&auto=format&fit=crop",
       "imageHint": "happy client"
     },
     {
       "id": "testimonial-4",
       "description": "Client photo for testimonial",
-      "imageUrl": "https://picsum.photos/seed/person4/100/100",
+      "imageUrl": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=200&auto=format&fit=crop",
       "imageHint": "satisfied client"
     }
   ]

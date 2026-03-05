@@ -10,23 +10,23 @@ export function Footer() {
   return (
     <footer className="bg-card text-card-foreground border-t">
       <div className="container mx-auto px-4 py-8 md:px-6">
-        <div className="grid gap-8 md:grid-cols-3">
-          <div className="flex flex-col items-start gap-4">
+        <div className="grid gap-8 md:grid-cols-3 text-center">
+          <div className="flex flex-col items-center gap-4">
             <Logo />
-            <p className="text-sm text-muted-foreground">
+            <p className="text-sm text-muted-foreground max-w-xs mx-auto">
               Evolua com quem entende de resultados reais!
             </p>
           </div>
-          <div className="grid gap-4">
+          <div className="grid gap-4 place-items-center">
             <h4 className="font-semibold tracking-tight">Contato</h4>
             <div className="grid gap-2 text-sm text-muted-foreground">
               <p>Rua Fictícia, 123 - Velha, Blumenau/SC</p>
-              <Link href={WHATSAPP_LINK} className="hover:text-primary transition-colors flex items-center gap-2" target="_blank">
+              <Link href={WHATSAPP_LINK} className="hover:text-primary transition-colors flex items-center gap-2 justify-center" target="_blank">
                 <WhatsappIcon className="w-4 h-4" /> (47) 99999-9999
               </Link>
             </div>
           </div>
-          <div className="grid gap-4">
+          <div className="grid gap-4 place-items-center">
             <h4 className="font-semibold tracking-tight">Siga-nos</h4>
             <div className="flex items-center gap-4">
               <Link href={INSTAGRAM_LINK} aria-label="Instagram" target="_blank">

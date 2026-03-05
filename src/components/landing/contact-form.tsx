@@ -5,6 +5,7 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
 import { Wand2, Loader2 } from "lucide-react";
+import emailjs from '@emailjs/browser';
 
 import { Button } from "@/components/ui/button";
 import {
@@ -38,6 +39,7 @@ type Objective = 'Emagrecer' | 'Ganhar massa' | 'Condicionamento' | 'Outro';
 
 export function ContactForm() {
   const [isGenerating, setIsGenerating] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
 
   const form = useForm<z.infer<typeof formSchema>>({
@@ -89,14 +91,56 @@ export function ContactForm() {
   };
 
   function onSubmit(values: z.infer<typeof formSchema>) {
-    // This is a placeholder for form submission logic, e.g., using EmailJS.
-    // Replace with your actual implementation.
-    console.log("Form submitted:", values);
-    toast({
-      title: "Mensagem Enviada!",
-      description: "Obrigado pelo seu contato. Retornaremos em breve!",
-    });
-    form.reset();
+    setIsSubmitting(true);
+    
+    // Configuração do EmailJS
+    // Crie uma conta em https://www.emailjs.com/
+    // Adicione um novo serviço (ex: Gmail)
+    // Crie um template de e-mail com as variáveis {{from_name}}, {{from_phone}}, {{objective}}, {{message}}
+    // Vá para a seção 'Account' > 'API KEYS' e copie sua Public Key
+    // Substitua os valores abaixo pelas suas credenciais.
+    const serviceID = 'YOUR_SERVICE_ID';
+    const templateID = 'YOUR_TEMPLATE_ID';
+    const publicKey = 'YOUR_PUBLIC_KEY';
+
+    const templateParams = {
+      from_name: values.name,
+      from_phone: values.phone,
+      objective: values.objective,
+      message: values.message,
+    };
+    
+    // Verifica se as credenciais do EmailJS são placeholders
+    if (serviceID === 'YOUR_SERVICE_ID' || templateID === 'YOUR_TEMPLATE_ID' || publicKey === 'YOUR_PUBLIC_KEY') {
+        console.log("Form submitted (placeholders):", values);
+        toast({
+            title: "Mensagem Enviada (Simulação)!",
+            description: "Obrigado pelo seu contato. Em um app real, a mensagem seria enviada aqui.",
+        });
+        form.reset();
+        setIsSubmitting(false);
+        return;
+    }
+    
+    emailjs.send(serviceID, templateID, templateParams, publicKey)
+      .then((response) => {
+        console.log('SUCCESS!', response.status, response.text);
+        toast({
+          title: "Mensagem Enviada!",
+          description: "Obrigado pelo seu contato. Retornaremos em breve!",
+        });
+        form.reset();
+      }, (err) => {
+        console.log('FAILED...', err);
+        toast({
+          title: "Erro ao Enviar",
+          description: "Houve um problema ao enviar sua mensagem. Tente novamente mais tarde.",
+          variant: "destructive",
+        });
+      })
+      .finally(() => {
+        setIsSubmitting(false);
+      });
   }
 
   return (
@@ -189,7 +233,8 @@ export function ContactForm() {
             </FormItem>
           )}
         />
-        <Button type="submit" size="lg" className="w-full" variant="secondary">
+        <Button type="submit" size="lg" className="w-full" variant="secondary" disabled={isSubmitting}>
+          {isSubmitting && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
           Enviar Mensagem
         </Button>
       </form>

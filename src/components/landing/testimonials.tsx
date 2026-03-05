@@ -52,7 +52,7 @@ export function Testimonials() {
             </p>
           </div>
         </div>
-        <div className="mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
+        <div className="mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-12 justify-items-center">
           {testimonials.map((testimonial, index) => {
             const image = getImage(testimonial.imageId);
             return (
