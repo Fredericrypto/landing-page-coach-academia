@@ -1,3 +1,70 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "hero-background",
+      "description": "Motivational workout image for hero section",
+      "imageUrl": "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=2070&auto=format&fit=crop",
+      "imageHint": "gym workout"
+    },
+    {
+      "id": "result-1-before",
+      "description": "Before image of a client transformation",
+      "imageUrl": "https://picsum.photos/seed/result1before/400/600",
+      "imageHint": "person before"
+    },
+    {
+      "id": "result-1-after",
+      "description": "After image of a client transformation",
+      "imageUrl": "https://picsum.photos/seed/result1after/400/600",
+      "imageHint": "person fitness"
+    },
+    {
+      "id": "result-2-before",
+      "description": "Before image of a client transformation",
+      "imageUrl": "https://picsum.photos/seed/result2before/400/600",
+      "imageHint": "man before"
+    },
+    {
+      "id": "result-2-after",
+      "description": "After image of a client transformation",
+      "imageUrl": "https://picsum.photos/seed/result2after/400/600",
+      "imageHint": "man fitness"
+    },
+    {
+      "id": "result-3-before",
+      "description": "Before image of a client transformation",
+      "imageUrl": "https://picsum.photos/seed/result3before/400/600",
+      "imageHint": "woman before"
+    },
+    {
+      "id": "result-3-after",
+      "description": "After image of a client transformation",
+      "imageUrl": "https://picsum.photos/seed/result3after/400/600",
+      "imageHint": "woman fitness"
+    },
+    {
+      "id": "testimonial-1",
+      "description": "Client photo for testimonial",
+      "imageUrl": "https://picsum.photos/seed/person1/100/100",
+      "imageHint": "happy person"
+    },
+    {
+      "id": "testimonial-2",
+      "description": "Client photo for testimonial",
+      "imageUrl": "https://picsum.photos/seed/person2/100/100",
+      "imageHint": "smiling person"
+    },
+    {
+      "id": "testimonial-3",
+      "description": "Client photo for testimonial",
+      "imageUrl": "https://picsum.photos/seed/person3/100/100",
+      "imageHint": "happy client"
+    },
+    {
+      "id": "testimonial-4",
+      "description": "Client photo for testimonial",
+      "imageUrl": "https://picsum.photos/seed/person4/100/100",
+      "imageHint": "satisfied client"
+    }
+  ]
 }
