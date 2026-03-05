@@ -42,9 +42,9 @@ export function Plans() {
             </p>
           </div>
         </div>
-        <div className="mx-auto grid items-start gap-8 sm:max-w-4xl sm:grid-cols-2 md:gap-12 lg:max-w-5xl lg:grid-cols-3 xl:grid-cols-5 mt-12">
+        <div className="mt-12 flex flex-wrap justify-center gap-8">
           {services.map((service, index) => (
-            <Card key={index} className="bg-background border-border/50 hover:border-primary transition-colors text-center flex flex-col items-center">
+            <Card key={index} className="flex w-full max-w-[300px] flex-col items-center border-border/50 bg-background text-center transition-colors hover:border-primary">
               <CardHeader className="items-center">
                 {service.icon}
                 <CardTitle className="mt-4">{service.title}</CardTitle>
