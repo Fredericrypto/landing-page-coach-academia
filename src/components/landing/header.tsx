@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -20,6 +20,11 @@ const WHATSAPP_LINK = "https://wa.me/5547999999999";
 
 export function Header() {
   const [isSheetOpen, setIsSheetOpen] = useState(false);
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-sm border-b">
@@ -46,46 +51,48 @@ export function Header() {
           </Button>
         </div>
         <div className="md:hidden">
-          <Sheet open={isSheetOpen} onOpenChange={setIsSheetOpen}>
-            <SheetTrigger asChild>
-              <Button variant="ghost" size="icon">
-                <Menu className="h-6 w-6" />
-                <span className="sr-only">Abrir menu</span>
-              </Button>
-            </SheetTrigger>
-            <SheetContent side="right" className="w-[300px] sm:w-[400px]">
-              <div className="p-4 flex flex-col h-full">
-                <div className="flex justify-between items-center mb-8">
-                  <Logo />
-                  <SheetClose asChild>
-                    <Button variant="ghost" size="icon">
-                      <X className="h-6 w-6" />
-                      <span className="sr-only">Fechar menu</span>
-                    </Button>
-                  </SheetClose>
-                </div>
-                <nav className="flex flex-col items-center text-center gap-6">
-                  {NAV_LINKS.map((link) => (
-                    <SheetClose asChild key={link.href}>
-                      <Link
-                        href={link.href}
-                        className="text-lg font-medium text-foreground transition-colors hover:text-primary"
-                      >
-                        {link.label}
-                      </Link>
+          {isMounted && (
+            <Sheet open={isSheetOpen} onOpenChange={setIsSheetOpen}>
+              <SheetTrigger asChild>
+                <Button variant="ghost" size="icon">
+                  <Menu className="h-6 w-6" />
+                  <span className="sr-only">Abrir menu</span>
+                </Button>
+              </SheetTrigger>
+              <SheetContent side="right" className="w-[300px] sm:w-[400px]">
+                <div className="p-4 flex flex-col h-full">
+                  <div className="flex justify-between items-center mb-8">
+                    <Logo />
+                    <SheetClose asChild>
+                      <Button variant="ghost" size="icon">
+                        <X className="h-6 w-6" />
+                        <span className="sr-only">Fechar menu</span>
+                      </Button>
                     </SheetClose>
-                  ))}
-                </nav>
-                <div className="mt-auto">
-                    <Button asChild size="lg" className="w-full bg-primary hover:bg-primary/90 text-primary-foreground">
-                        <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
-                            Agende Avaliação Grátis
-                        </a>
-                    </Button>
+                  </div>
+                  <nav className="flex flex-col items-center text-center gap-6">
+                    {NAV_LINKS.map((link) => (
+                      <SheetClose asChild key={link.href}>
+                        <Link
+                          href={link.href}
+                          className="text-lg font-medium text-foreground transition-colors hover:text-primary"
+                        >
+                          {link.label}
+                        </Link>
+                      </SheetClose>
+                    ))}
+                  </nav>
+                  <div className="mt-auto">
+                      <Button asChild size="lg" className="w-full bg-primary hover:bg-primary/90 text-primary-foreground">
+                          <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
+                              Agende Avaliação Grátis
+                          </a>
+                      </Button>
+                  </div>
                 </div>
-              </div>
-            </SheetContent>
-          </Sheet>
+              </SheetContent>
+            </Sheet>
+          )}
         </div>
       </div>
     </header>
