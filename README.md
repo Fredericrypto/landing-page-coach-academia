@@ -7,7 +7,7 @@ Landing page moderna, motivacional e focada em conversão para personal trainer 
 Terceiro projeto do meu portfólio front-end para demonstrar variedade em nichos locais (beleza, saúde bucal, fitness).
 
 **Live Demo:**  
-
+[FitEvolution](https://landing-page-coach-academia-blumena.vercel.app/)
 
 ## Sobre o Projeto
 
