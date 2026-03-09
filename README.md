@@ -7,7 +7,8 @@ Landing page moderna, motivacional e focada em conversão para personal trainer 
 Terceiro projeto do meu portfólio front-end para demonstrar variedade em nichos locais (beleza, saúde bucal, fitness).
 
 **Live Demo:**  
-[FitEvolution](https://landing-page-coach-academia-blumena.vercel.app/) <p align="center">
+[FitEvolution](https://landing-page-coach-academia-blumena.vercel.app/) 
+<p align="center">
   <img src="assets/demo-2x.gif" alt="Demonstração acelerada 2x" width="70%">
 </p>
 
