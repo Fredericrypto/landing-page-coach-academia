@@ -26,10 +26,12 @@ Página fictícia para o "Fit Evolution Blumenau", com design energizante, cores
 - **Footer**: Endereço em Blumenau, WhatsApp, Instagram, frase motivacional
 
 ### Tecnologias Usadas
-- HTML5
-- Tailwind CSS
-- JavaScript básico
-- Deploy: Vercel
+
+* HTML5
+* CSS3
+* TypeScript
+* Tailwind CSS
+* Deploy: **Vercel**
 
 ### Features
 - 100% responsivo (mobile-first, tudo centralizado em desktop e mobile)
