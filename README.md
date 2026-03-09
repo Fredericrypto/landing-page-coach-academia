@@ -27,8 +27,8 @@ Página fictícia para o "Fit Evolution Blumenau", com design energizante, cores
 
 ### Tecnologias Usadas
 - HTML5
-- Tailwind CSS (via CDN)
-- JavaScript básico (interações e EmailJS)
+- Tailwind CSS
+- JavaScript básico
 - Deploy: Vercel
 
 ### Features
