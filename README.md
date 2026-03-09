@@ -30,7 +30,6 @@ Página fictícia para o "Fit Evolution Blumenau", com design energizante, cores
 - Tailwind CSS (via CDN)
 - JavaScript básico (interações e EmailJS)
 - Deploy: Vercel
-- Auxílio na criação: IA (Grok/ChatGPT/Firebase Studio)
 
 ### Features
 - 100% responsivo (mobile-first, tudo centralizado em desktop e mobile)
